@@ -1,0 +1,16 @@
+how to run this task 
+task name add a record using node js mongoDB
+first step 
+--------------
+
+npm install 
+
+node server.js
+
+then your server run in 4000 port 
+
+double click on index.html 
+then  add a record 
+=============== Thank you=====================
+
+ 
