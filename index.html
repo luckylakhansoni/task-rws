@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.form-style-1 {
+		margin: 10px auto;
+		max-width: 400px;
+		padding: 20px 12px 10px 20px;
+		font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+
+	.form-style-1 li {
+		padding: 0;
+		display: block;
+		list-style: none;
+		margin: 10px 0 0 0;
+	}
+
+	.form-style-1 label {
+		margin: 0 0 3px 0;
+		padding: 0px;
+		display: block;
+		font-weight: bold;
+	}
+
+	.form-style-1 input[type=text],
+	.form-style-1 input[type=date],
+	.form-style-1 input[type=datetime],
+	.form-style-1 input[type=number],
+	.form-style-1 input[type=search],
+	.form-style-1 input[type=time],
+	.form-style-1 input[type=url],
+	.form-style-1 input[type=email],
+	textarea,
+	select {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		border: 1px solid #BEBEBE;
+		padding: 7px;
+		margin: 0px;
+		-webkit-transition: all 0.30s ease-in-out;
+		-moz-transition: all 0.30s ease-in-out;
+		-ms-transition: all 0.30s ease-in-out;
+		-o-transition: all 0.30s ease-in-out;
+		outline: none;
+	}
+
+	.form-style-1 input[type=text]:focus,
+	.form-style-1 input[type=date]:focus,
+	.form-style-1 input[type=datetime]:focus,
+	.form-style-1 input[type=number]:focus,
+	.form-style-1 input[type=search]:focus,
+	.form-style-1 input[type=time]:focus,
+	.form-style-1 input[type=url]:focus,
+	.form-style-1 input[type=email]:focus,
+	.form-style-1 textarea:focus,
+	.form-style-1 select:focus {
+		-moz-box-shadow: 0 0 8px #88D5E9;
+		-webkit-box-shadow: 0 0 8px #88D5E9;
+		box-shadow: 0 0 8px #88D5E9;
+		border: 1px solid #88D5E9;
+	}
+
+	.form-style-1 .field-divided {
+		width: 49%;
+	}
+
+	.form-style-1 .field-long {
+		width: 100%;
+	}
+
+	.form-style-1 .field-select {
+		width: 100%;
+	}
+
+	.form-style-1 .field-textarea {
+		height: 100px;
+	}
+
+	.form-style-1 input[type=submit],
+	.form-style-1 input[type=button] {
+		background: #4B99AD;
+		padding: 8px 15px 8px 15px;
+		border: none;
+		color: #fff;
+	}
+
+	.form-style-1 input[type=submit]:hover,
+	.form-style-1 input[type=button]:hover {
+		background: #4691A4;
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+
+	.form-style-1 .required {
+		color: red;
+	}
+</style>
+
+<body>
+
+	<form method="POST">
+		<ul class="form-style-1">
+			<li>
+				<h1 style="text-align: center;">
+					Add Record <span class="required"></span>
+				</h1>
+
+				</label>
+			<li>
+				<label>
+					Name <span class="required">*</span>
+				</label>
+				<input type="text" name="name" class="field-long" placeholder="Enter name" id="name" />
+			</li>
+			<li>
+				<label>Email <span class="required">*</span></label>
+				<input type="email" name="email" class="field-long" placeholder="Enter your Email" id="email" />
+			</li>
+			<li>
+				<label>
+					Mobile <span class="required">*</span>
+				</label>
+				<input type="number" name="mobile" class="field-long" placeholder="Enter mobile no" id="mobile" />
+			</li>
+			<li>
+				<center><button type="button" class="btn btn-primary" value="submit" , id="sub">Submit</button></center>
+			</li>
+		</ul>
+	</form>
+	<script type='text/javascript'>
+		jQuery('#sub').click(function (e) {
+			console.log('hii')
+			let valueName = $("#name").val();
+			let valueEmail = $("#email").val();
+			let valueMobile = $("#mobile").val();
+			if(!valueName ||  !valueMobile || !valueEmail) {
+				alert('Please fill the all fields')
+				window.location.href = "index.html";
+			}
+
+			$.ajax({
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json"
+				},
+				url: "http://localhost:4000/users",
+				type: "POST",
+				data: JSON.stringify({ name: valueName, email: valueEmail, mobile: valueMobile }),
+				success: function (data, textStatus, jqXHR) {
+					alert('Register successfully')
+					window.location.href = "index.html";
+				}
+			});
+		})
+
+	</script>
+</body>
+
+</html>
